@@ -6,7 +6,9 @@ public class Move : MonoBehaviour
     float moveSpeed = 5f;
     public float JumpForce = 10f;
     public Rigidbody2D rb;
-
+    
+    private Crouch crouch;
+    
     private Vector2 movement;
 
     private float moveX;
