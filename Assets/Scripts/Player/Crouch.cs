@@ -10,14 +10,14 @@ public class Crouch : MonoBehaviour
     public Transform headCheck;
     public float headCheckLength;
 
-    LayerMask GroundLayer;
+    //LayerMask GroundLayer;
     private Vector2 normalHeight;
     private float yInput;
 
 
     public void Start()
     {
-        GroundLayer = player.GroundLayer;
+        //GroundLayer = player.GroundLayer;
         normalHeight = transform.localScale;
     }
 
@@ -31,7 +31,7 @@ public class Crouch : MonoBehaviour
         {
             if(transform.localScale.y != crouchHeight)
             transform.localScale = Vector2.Lerp(transform.localScale, new Vector2(normalHeight.x, crouchHeight), 0.1f);
-            Crouch JumpForce = 0f;
+          
         }
         else 
         {
@@ -42,7 +42,7 @@ public class Crouch : MonoBehaviour
 
     bool HeadDetect()
     {
-        bool hit = Physics2D.Raycast(headCheck.position, Vector2.up, headCheckLength, GroundLayer);
+        bool hit = Physics2D.Raycast(headCheck.position, Vector2.up, headCheckLength, 1);
         return hit;
     }
 

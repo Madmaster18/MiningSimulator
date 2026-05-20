@@ -13,8 +13,8 @@ public class Move : MonoBehaviour
 
     private float moveX;
 
-    [Header("Ground")]
-    public LayerMask GroundLayer;
+    //[Header("Ground")]
+    //public LayerMask GroundLayer;
     public BoxCollider2D GroundCollider;
     public bool OnGround;
 
@@ -36,19 +36,33 @@ public class Move : MonoBehaviour
         } 
 
     }
-
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        if(GroundLayer == (1 << other.gameObject.layer))
-        {
-            OnGround = true;
-        }
-    }
-
     void FixedUpdate()
     {
         movement = new Vector2(moveX * moveSpeed, GetComponent<Rigidbody2D>().linearVelocity.y);
         rb.linearVelocity = movement;
     }
+    
+    
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        //if(GroundLayer == (1 << other.gameObject.layer) 
+        
+        if (other.CompareTag("NoJump"))
+            {
+                OnGround = false;
+            }
+        else if(other.CompareTag("Ground"))
+            {
+                OnGround = true;
+                Debug.Log("Player is on Ground");
+            }
+        else
+        {
+            Debug.Log("Where are we?");
+        }
+        
+    }
+
+
 
 }
