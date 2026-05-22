@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NoJump
   - Ground
+  - Ladder
   layers:
   - Default
   - TransparentFX
