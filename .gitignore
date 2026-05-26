@@ -97,3 +97,46 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+#Firebase iOS auth bundle
+.DS_Store
+
+# Python byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+### Gradle ###
+.gradle
+**/build/
+
+# Unencrypted secret files
+google-services.json
+GoogleService-Info.plist
+uri_prefix.txt
+server_key.txt
+gcs_key_file.json
+
+# Folders for cmake/test output
+*_build/
+*_unity/
+*_unity_seperate/
+*_unity_separate/
+output/
+output_unpack*/
+
+# Windows ignore
+vcpkg
+
+# Visual Studio Code
+.vscode/
+
+# Downloaded NDK
+ndk/
+ndk_zip
+
+# Downloaded EDM4U
+unity_jar_resolver/
+
+/[Aa]ssets/Firebase/Plugins/x86_64/FirebaseCppApp-13_11_0.bundle

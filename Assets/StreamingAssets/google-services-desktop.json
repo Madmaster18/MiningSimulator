@@ -1,0 +1,31 @@
+{
+  "project_info": {
+    "project_number": "478866541946",
+    "project_id": "miningsimulatorcaleb",
+    "storage_bucket": "miningsimulatorcaleb.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:478866541946:ios:7fd58d2df2864cd65ddac3",
+        "android_client_info": {
+          "package_name": "com.DefaultCompany.2D-URP"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtZZHKof0BvFghlyXZ1TzkI6zHfZ28WqY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 0
+        },
+        "appinvite_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
